@@ -1,0 +1,236 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K80 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"57 C:\Users\alexg\Bureau\Labo2.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"86
+[v _cligne cligne `(v  1 e 1 0 ]
+"143
+[v _afficheur afficheur `(v  1 e 1 0 ]
+"50 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"57
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"26860 C:/Users/alexg/.mchp_packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f25k80.h
+[v _WPUB WPUB `VEuc  1 e 1 @3931 ]
+"26922
+[v _ANCON1 ANCON1 `VEuc  1 e 1 @3932 ]
+"26974
+[v _ANCON0 ANCON0 `VEuc  1 e 1 @3933 ]
+[s S161 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"29959
+[s S170 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S173 . 1 `S161 1 . 1 0 `S170 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES173  1 e 1 @3969 ]
+[s S240 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"30035
+[s S249 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S253 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S256 . 1 `S240 1 . 1 0 `S249 1 . 1 0 `S253 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES256  1 e 1 @3970 ]
+"30225
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+[s S200 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"30252
+[s S209 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S218 . 1 `S200 1 . 1 0 `S209 1 . 1 0 ]
+[v _LATAbits LATAbits `VES218  1 e 1 @3977 ]
+"30327
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"30439
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+[s S277 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"30466
+[s S286 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S295 . 1 `S277 1 . 1 0 `S286 1 . 1 0 ]
+[v _LATCbits LATCbits `VES295  1 e 1 @3979 ]
+"30645
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"30702
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"30764
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"30870
+[v _REFOCON REFOCON `VEuc  1 e 1 @3994 ]
+"30935
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+"35621
+[v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
+"35693
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S47 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"36579
+[s S50 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 INT3IP 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 INTEDG3 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"36579
+[s S59 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT3P 1 0 :1:1 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+"36579
+[u S65 . 1 `S47 1 . 1 0 `S50 1 . 1 0 `S59 1 . 1 0 ]
+"36579
+"36579
+[v _INTCON2bits INTCON2bits `VES65  1 e 1 @4081 ]
+[s S88 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"36681
+[s S97 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"36681
+[s S106 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+"36681
+[u S110 . 1 `S88 1 . 1 0 `S97 1 . 1 0 `S106 1 . 1 0 ]
+"36681
+"36681
+[v _INTCONbits INTCONbits `VES110  1 e 1 @4082 ]
+"53 C:\Users\alexg\Bureau\Labo2.X\main.c
+[v _var_compteur var_compteur `i  1 e 2 0 ]
+"57
+[v _main main `(v  1 e 1 0 ]
+{
+"61
+[v main@maintien maintien `ui  1 a 2 8 ]
+"81
+} 0
+"86
+[v _cligne cligne `(v  1 e 1 0 ]
+{
+"87
+[v cligne@i i `ui  1 a 2 4 ]
+"86
+[v cligne@nb nb `ui  1 p 2 0 ]
+"94
+} 0
+"143
+[v _afficheur afficheur `(v  1 e 1 0 ]
+{
+[v afficheur@var_compteur var_compteur `i  1 p 2 0 ]
+"188
+} 0
+"50 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"55 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"57 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"67
+} 0
