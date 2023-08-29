@@ -1506,466 +1506,477 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 1534 ]
 "73
-[; ;main.c: 73:                  maintien = 1;
-[e = _maintien -> -> 1 `i `ui ]
-"74
-[; ;main.c: 74:                  _delay((unsigned long)((250)*(20000000/4000.0)));
+[; ;main.c: 73:                  _delay((unsigned long)((250)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"75
-[; ;main.c: 75:              }
-}
-[e :U 1533 ]
-"76
-[; ;main.c: 76:          }
-}
-[e $U 1535  ]
-"77
-[; ;main.c: 77:          else {
-[e :U 1532 ]
+"74
+[; ;main.c: 74:                  if (maintien == 1) {
+[e $ ! == _maintien -> -> 1 `i `ui 1535  ]
 {
-"78
-[; ;main.c: 78:              maintien = 0;
-[e = _maintien -> -> 0 `i `ui ]
-"79
-[; ;main.c: 79:          }
+"75
+[; ;main.c: 75:                      var_compteur++;
+[e ++ _var_compteur -> 1 `i ]
+"76
+[; ;main.c: 76:                      _delay((unsigned long)((1000)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"77
+[; ;main.c: 77:                  }
 }
 [e :U 1535 ]
+"79
+[; ;main.c: 79:              }
+}
+[e :U 1533 ]
 "80
-[; ;main.c: 80:      }
+[; ;main.c: 80:          }
+}
+[e $U 1536  ]
+"81
+[; ;main.c: 81:          else {
+[e :U 1532 ]
+{
+"82
+[; ;main.c: 82:              maintien = 0;
+[e = _maintien -> -> 0 `i `ui ]
+"83
+[; ;main.c: 83:          }
+}
+[e :U 1536 ]
+"84
+[; ;main.c: 84:      }
 }
 [e :U 1529 ]
 [e $U 1530  ]
 [e :U 1531 ]
-"81
-[; ;main.c: 81: }
+"85
+[; ;main.c: 85: }
 [e :UE 1528 ]
 }
-"86
-[; ;main.c: 86: void cligne (unsigned nb) {
+"90
+[; ;main.c: 90: void cligne (unsigned nb) {
 [v _cligne `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _cligne ]
 [v _nb `ui ~T0 @X0 1 r1 ]
 [f ]
-"87
-[; ;main.c: 87:     for (unsigned i=0;i<nb;i++){
+"91
+[; ;main.c: 91:     for (unsigned i=0;i<nb;i++){
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
-[e $U 1540  ]
-[e :U 1537 ]
+[e $U 1541  ]
+[e :U 1538 ]
 {
-"88
-[; ;main.c: 88:         LATAbits.LATA5=1;
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-"89
-[; ;main.c: 89:         _delay((unsigned long)((200)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"90
-[; ;main.c: 90:         LATAbits.LATA5=0;
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-"91
-[; ;main.c: 91:         _delay((unsigned long)((200)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "92
-[; ;main.c: 92:     }
+[; ;main.c: 92:         LATAbits.LATA5=1;
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+"93
+[; ;main.c: 93:         _delay((unsigned long)((200)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"94
+[; ;main.c: 94:         LATAbits.LATA5=0;
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+"95
+[; ;main.c: 95:         _delay((unsigned long)((200)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"96
+[; ;main.c: 96:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 1540 ]
-[e $ < _i _nb 1537  ]
-[e :U 1538 ]
+[e :U 1541 ]
+[e $ < _i _nb 1538  ]
+[e :U 1539 ]
 }
-"94
-[; ;main.c: 94: }
-[e :UE 1536 ]
+"98
+[; ;main.c: 98: }
+[e :UE 1537 ]
 }
-"97
-[; ;main.c: 97: void tout_allume() {
+"101
+[; ;main.c: 101: void tout_allume() {
 [v _tout_allume `(v ~T0 @X0 1 ef ]
 {
 [e :U _tout_allume ]
 [f ]
-"100
-[; ;main.c: 100:     PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"102
-[; ;main.c: 102:     LATAbits.LATA0=0;
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-"103
-[; ;main.c: 103:     LATAbits.LATA1=0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "104
-[; ;main.c: 104:     LATAbits.LATA2=0;
+[; ;main.c: 104:     PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"106
+[; ;main.c: 106:     LATAbits.LATA0=0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"107
+[; ;main.c: 107:     LATAbits.LATA1=0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"108
+[; ;main.c: 108:     LATAbits.LATA2=0;
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-"105
-[; ;main.c: 105:     LATAbits.LATA3=0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "109
-[; ;main.c: 109:     LATCbits.LATC1=0;
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"110
-[; ;main.c: 110:     LATCbits.LATC2=0;
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"111
-[; ;main.c: 111:     LATCbits.LATC3=0;
-[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112:     LATCbits.LATC4=0;
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 109:     LATAbits.LATA3=0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "113
-[; ;main.c: 113:     LATCbits.LATC5=0;
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 113:     LATCbits.LATC1=0;
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 "114
-[; ;main.c: 114: }
-[e :UE 1541 ]
-}
+[; ;main.c: 114:     LATCbits.LATC2=0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+"115
+[; ;main.c: 115:     LATCbits.LATC3=0;
+[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
 "116
-[; ;main.c: 116: void tout_eteint() {
+[; ;main.c: 116:     LATCbits.LATC4=0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+"117
+[; ;main.c: 117:     LATCbits.LATC5=0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"118
+[; ;main.c: 118: }
+[e :UE 1542 ]
+}
+"120
+[; ;main.c: 120: void tout_eteint() {
 [v _tout_eteint `(v ~T0 @X0 1 ef ]
 {
 [e :U _tout_eteint ]
 [f ]
-"120
-[; ;main.c: 120:     PORTCbits.RC0=1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "124
-[; ;main.c: 124:     LATCbits.LATC1=1;
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"125
-[; ;main.c: 125:     LATCbits.LATC2=1;
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"126
-[; ;main.c: 126:     LATCbits.LATC3=1;
-[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
-"127
-[; ;main.c: 127:     LATCbits.LATC4=1;
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 124:     PORTCbits.RC0=1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "128
-[; ;main.c: 128:     LATCbits.LATC5=1;
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 128:     LATCbits.LATC1=1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"129
+[; ;main.c: 129:     LATCbits.LATC2=1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 "130
-[; ;main.c: 130: }
-[e :UE 1542 ]
-}
+[; ;main.c: 130:     LATCbits.LATC3=1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"131
+[; ;main.c: 131:     LATCbits.LATC4=1;
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 "132
-[; ;main.c: 132: void compteur() {
+[; ;main.c: 132:     LATCbits.LATC5=1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+"134
+[; ;main.c: 134: }
+[e :UE 1543 ]
+}
+"136
+[; ;main.c: 136: void compteur() {
 [v _compteur `(v ~T0 @X0 1 ef ]
 {
 [e :U _compteur ]
 [f ]
-"135
-[; ;main.c: 135:     if (var_compteur==5){
-[e $ ! == _var_compteur -> 5 `i 1544  ]
-{
-"136
-[; ;main.c: 136:         var_compteur=0;
-[e = _var_compteur -> 0 `i ]
-"137
-[; ;main.c: 137:     }
-}
-[e $U 1545  ]
-"138
-[; ;main.c: 138:     else {
-[e :U 1544 ]
-{
 "139
-[; ;main.c: 139:         var_compteur++;
-[e ++ _var_compteur -> 1 `i ]
+[; ;main.c: 139:     if (var_compteur==5){
+[e $ ! == _var_compteur -> 5 `i 1545  ]
+{
 "140
-[; ;main.c: 140:     }
-}
-[e :U 1545 ]
+[; ;main.c: 140:         var_compteur=0;
+[e = _var_compteur -> 0 `i ]
 "141
-[; ;main.c: 141: }
-[e :UE 1543 ]
+[; ;main.c: 141:     }
 }
+[e $U 1546  ]
+"142
+[; ;main.c: 142:     else {
+[e :U 1545 ]
+{
 "143
-[; ;main.c: 143: void afficheur(int var_compteur) {
+[; ;main.c: 143:         var_compteur++;
+[e ++ _var_compteur -> 1 `i ]
+"144
+[; ;main.c: 144:     }
+}
+[e :U 1546 ]
+"145
+[; ;main.c: 145: }
+[e :UE 1544 ]
+}
+"147
+[; ;main.c: 147: void afficheur(int var_compteur) {
 [v _afficheur `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _afficheur ]
 [v _var_compteur `i ~T0 @X0 1 r1 ]
 [f ]
-"145
-[; ;main.c: 145:     switch (var_compteur) {
-[e $U 1548  ]
-{
-"146
-[; ;main.c: 146:         case 0:
-[e :U 1549 ]
-"147
-[; ;main.c: 147:             LATAbits.LATA0=0;
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-"148
-[; ;main.c: 148:             LATAbits.LATA1=0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "149
-[; ;main.c: 149:             LATAbits.LATA2=0;
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 149:     switch (var_compteur) {
+[e $U 1549  ]
+{
 "150
-[; ;main.c: 150:             LATAbits.LATA3=0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"151
-[; ;main.c: 151:             break;
-[e $U 1547  ]
-"153
-[; ;main.c: 153:         case 1:
+[; ;main.c: 150:         case 0:
 [e :U 1550 ]
+"151
+[; ;main.c: 151:             LATAbits.LATA0=0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"152
+[; ;main.c: 152:             LATAbits.LATA1=0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"153
+[; ;main.c: 153:             LATAbits.LATA2=0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 "154
-[; ;main.c: 154:             LATAbits.LATA0=1;
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 154:             LATAbits.LATA3=0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "155
-[; ;main.c: 155:             LATAbits.LATA1=0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"156
-[; ;main.c: 156:             LATAbits.LATA2=0;
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 155:             break;
+[e $U 1548  ]
 "157
-[; ;main.c: 157:             LATAbits.LATA3=0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"158
-[; ;main.c: 158:             break;
-[e $U 1547  ]
-"160
-[; ;main.c: 160:         case 2:
+[; ;main.c: 157:         case 1:
 [e :U 1551 ]
+"158
+[; ;main.c: 158:             LATAbits.LATA0=1;
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+"159
+[; ;main.c: 159:             LATAbits.LATA1=0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"160
+[; ;main.c: 160:             LATAbits.LATA2=0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 "161
-[; ;main.c: 161:             LATAbits.LATA0=0;
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 161:             LATAbits.LATA3=0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "162
-[; ;main.c: 162:             LATAbits.LATA1=1;
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"163
-[; ;main.c: 163:             LATAbits.LATA2=0;
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 162:             break;
+[e $U 1548  ]
 "164
-[; ;main.c: 164:             LATAbits.LATA3=0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"165
-[; ;main.c: 165:             break;
-[e $U 1547  ]
-"167
-[; ;main.c: 167:         case 3:
+[; ;main.c: 164:         case 2:
 [e :U 1552 ]
-"168
-[; ;main.c: 168:             LATAbits.LATA0=1;
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-"169
-[; ;main.c: 169:             LATAbits.LATA1=1;
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"170
-[; ;main.c: 170:             LATAbits.LATA2=0;
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:             LATAbits.LATA3=0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"172
-[; ;main.c: 172:             break;
-[e $U 1547  ]
-"174
-[; ;main.c: 174:         case 4:
-[e :U 1553 ]
-"175
-[; ;main.c: 175:             LATAbits.LATA0=0;
+"165
+[; ;main.c: 165:             LATAbits.LATA0=0;
 [e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-"176
-[; ;main.c: 176:             LATAbits.LATA1=0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:             LATAbits.LATA2=1;
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"178
-[; ;main.c: 178:             LATAbits.LATA3=0;
+"166
+[; ;main.c: 166:             LATAbits.LATA1=1;
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+"167
+[; ;main.c: 167:             LATAbits.LATA2=0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+"168
+[; ;main.c: 168:             LATAbits.LATA3=0;
 [e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"179
-[; ;main.c: 179:             break;
-[e $U 1547  ]
-"181
-[; ;main.c: 181:         case 5:
-[e :U 1554 ]
-"182
-[; ;main.c: 182:             LATAbits.LATA0=1;
+"169
+[; ;main.c: 169:             break;
+[e $U 1548  ]
+"171
+[; ;main.c: 171:         case 3:
+[e :U 1553 ]
+"172
+[; ;main.c: 172:             LATAbits.LATA0=1;
 [e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
-"183
-[; ;main.c: 183:             LATAbits.LATA1=0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"184
-[; ;main.c: 184:             LATAbits.LATA2=1;
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"185
-[; ;main.c: 185:             LATAbits.LATA3=0;
+"173
+[; ;main.c: 173:             LATAbits.LATA1=1;
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+"174
+[; ;main.c: 174:             LATAbits.LATA2=0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+"175
+[; ;main.c: 175:             LATAbits.LATA3=0;
 [e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+"176
+[; ;main.c: 176:             break;
+[e $U 1548  ]
+"178
+[; ;main.c: 178:         case 4:
+[e :U 1554 ]
+"179
+[; ;main.c: 179:             LATAbits.LATA0=0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"180
+[; ;main.c: 180:             LATAbits.LATA1=0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"181
+[; ;main.c: 181:             LATAbits.LATA2=1;
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"182
+[; ;main.c: 182:             LATAbits.LATA3=0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+"183
+[; ;main.c: 183:             break;
+[e $U 1548  ]
+"185
+[; ;main.c: 185:         case 5:
+[e :U 1555 ]
 "186
-[; ;main.c: 186:             break;
-[e $U 1547  ]
+[; ;main.c: 186:             LATAbits.LATA0=1;
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
 "187
-[; ;main.c: 187:     }
-}
-[e $U 1547  ]
-[e :U 1548 ]
-[e [\ _var_compteur , $ -> 0 `i 1549
- , $ -> 1 `i 1550
- , $ -> 2 `i 1551
- , $ -> 3 `i 1552
- , $ -> 4 `i 1553
- , $ -> 5 `i 1554
- 1547 ]
-[e :U 1547 ]
+[; ;main.c: 187:             LATAbits.LATA1=0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "188
-[; ;main.c: 188: }
-[e :UE 1546 ]
-}
+[; ;main.c: 188:             LATAbits.LATA2=1;
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"189
+[; ;main.c: 189:             LATAbits.LATA3=0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "190
-[; ;main.c: 190: void Dels(int var_compteur) {
+[; ;main.c: 190:             break;
+[e $U 1548  ]
+"191
+[; ;main.c: 191:     }
+}
+[e $U 1548  ]
+[e :U 1549 ]
+[e [\ _var_compteur , $ -> 0 `i 1550
+ , $ -> 1 `i 1551
+ , $ -> 2 `i 1552
+ , $ -> 3 `i 1553
+ , $ -> 4 `i 1554
+ , $ -> 5 `i 1555
+ 1548 ]
+[e :U 1548 ]
+"192
+[; ;main.c: 192: }
+[e :UE 1547 ]
+}
+"194
+[; ;main.c: 194: void Dels(int var_compteur) {
 [v _Dels `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _Dels ]
 [v _var_compteur `i ~T0 @X0 1 r1 ]
 [f ]
-"192
-[; ;main.c: 192:     switch (var_compteur) {
-[e $U 1557  ]
-{
-"194
-[; ;main.c: 194:         case 0:
-[e :U 1558 ]
-"195
-[; ;main.c: 195:             LATCbits.LATC1=0;
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 "196
-[; ;main.c: 196:             LATCbits.LATC2=0;
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"197
-[; ;main.c: 197:             LATCbits.LATC3=0;
-[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 196:     switch (var_compteur) {
+[e $U 1558  ]
+{
 "198
-[; ;main.c: 198:             LATCbits.LATC4=0;
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-"199
-[; ;main.c: 199:             LATCbits.LATC5=0;
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-"200
-[; ;main.c: 200:             break;
-[e $U 1556  ]
-"202
-[; ;main.c: 202:         case 1:
+[; ;main.c: 198:         case 0:
 [e :U 1559 ]
-"203
-[; ;main.c: 203:             LATCbits.LATC1=1;
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"204
-[; ;main.c: 204:             LATCbits.LATC2=0;
+"199
+[; ;main.c: 199:             LATCbits.LATC1=0;
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
+"200
+[; ;main.c: 200:             LATCbits.LATC2=0;
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"205
-[; ;main.c: 205:             LATCbits.LATC3=0;
+"201
+[; ;main.c: 201:             LATCbits.LATC3=0;
 [e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+"202
+[; ;main.c: 202:             LATCbits.LATC4=0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+"203
+[; ;main.c: 203:             LATCbits.LATC5=0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"204
+[; ;main.c: 204:             break;
+[e $U 1557  ]
 "206
-[; ;main.c: 206:             LATCbits.LATC4=0;
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-"207
-[; ;main.c: 207:             LATCbits.LATC5=0;
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-"208
-[; ;main.c: 208:             break;
-[e $U 1556  ]
-"210
-[; ;main.c: 210:         case 2:
+[; ;main.c: 206:         case 1:
 [e :U 1560 ]
-"211
-[; ;main.c: 211:             LATCbits.LATC1=1;
+"207
+[; ;main.c: 207:             LATCbits.LATC1=1;
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"212
-[; ;main.c: 212:             LATCbits.LATC2=1;
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"213
-[; ;main.c: 213:             LATCbits.LATC3=0;
+"208
+[; ;main.c: 208:             LATCbits.LATC2=0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+"209
+[; ;main.c: 209:             LATCbits.LATC3=0;
 [e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+"210
+[; ;main.c: 210:             LATCbits.LATC4=0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+"211
+[; ;main.c: 211:             LATCbits.LATC5=0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"212
+[; ;main.c: 212:             break;
+[e $U 1557  ]
 "214
-[; ;main.c: 214:             LATCbits.LATC4=0;
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-"215
-[; ;main.c: 215:             LATCbits.LATC5=0;
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-"216
-[; ;main.c: 216:             break;
-[e $U 1556  ]
-"218
-[; ;main.c: 218:         case 3:
+[; ;main.c: 214:         case 2:
 [e :U 1561 ]
-"219
-[; ;main.c: 219:             LATCbits.LATC1=1;
+"215
+[; ;main.c: 215:             LATCbits.LATC1=1;
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"220
-[; ;main.c: 220:             LATCbits.LATC2=1;
+"216
+[; ;main.c: 216:             LATCbits.LATC2=1;
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"221
-[; ;main.c: 221:             LATCbits.LATC3=1;
-[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
-"222
-[; ;main.c: 222:             LATCbits.LATC4=0;
+"217
+[; ;main.c: 217:             LATCbits.LATC3=0;
+[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+"218
+[; ;main.c: 218:             LATCbits.LATC4=0;
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-"223
-[; ;main.c: 223:             LATCbits.LATC5=0;
+"219
+[; ;main.c: 219:             LATCbits.LATC5=0;
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-"224
-[; ;main.c: 224:             break;
-[e $U 1556  ]
-"226
-[; ;main.c: 226:         case 4:
+"220
+[; ;main.c: 220:             break;
+[e $U 1557  ]
+"222
+[; ;main.c: 222:         case 3:
 [e :U 1562 ]
+"223
+[; ;main.c: 223:             LATCbits.LATC1=1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"224
+[; ;main.c: 224:             LATCbits.LATC2=1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+"225
+[; ;main.c: 225:             LATCbits.LATC3=1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"226
+[; ;main.c: 226:             LATCbits.LATC4=0;
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 "227
-[; ;main.c: 227:             LATCbits.LATC1=1;
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"228
-[; ;main.c: 228:             LATCbits.LATC2=1;
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"229
-[; ;main.c: 229:             LATCbits.LATC3=1;
-[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
-"230
-[; ;main.c: 230:             LATCbits.LATC4=1;
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-"231
-[; ;main.c: 231:             LATCbits.LATC5=0;
+[; ;main.c: 227:             LATCbits.LATC5=0;
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-"232
-[; ;main.c: 232:             break;
-[e $U 1556  ]
-"234
-[; ;main.c: 234:         case 5:
+"228
+[; ;main.c: 228:             break;
+[e $U 1557  ]
+"230
+[; ;main.c: 230:         case 4:
 [e :U 1563 ]
-"235
-[; ;main.c: 235:             LATCbits.LATC1=1;
+"231
+[; ;main.c: 231:             LATCbits.LATC1=1;
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"236
-[; ;main.c: 236:             LATCbits.LATC2=1;
+"232
+[; ;main.c: 232:             LATCbits.LATC2=1;
 [e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-"237
-[; ;main.c: 237:             LATCbits.LATC3=1;
+"233
+[; ;main.c: 233:             LATCbits.LATC3=1;
 [e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
-"238
-[; ;main.c: 238:             LATCbits.LATC4=1;
+"234
+[; ;main.c: 234:             LATCbits.LATC4=1;
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+"235
+[; ;main.c: 235:             LATCbits.LATC5=0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"236
+[; ;main.c: 236:             break;
+[e $U 1557  ]
+"238
+[; ;main.c: 238:         case 5:
+[e :U 1564 ]
 "239
-[; ;main.c: 239:             LATCbits.LATC5=1;
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 239:             LATCbits.LATC1=1;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 "240
-[; ;main.c: 240:             break;
-[e $U 1556  ]
+[; ;main.c: 240:             LATCbits.LATC2=1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 "241
-[; ;main.c: 241:     }
-}
-[e $U 1556  ]
-[e :U 1557 ]
-[e [\ _var_compteur , $ -> 0 `i 1558
- , $ -> 1 `i 1559
- , $ -> 2 `i 1560
- , $ -> 3 `i 1561
- , $ -> 4 `i 1562
- , $ -> 5 `i 1563
- 1556 ]
-[e :U 1556 ]
+[; ;main.c: 241:             LATCbits.LATC3=1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+"242
+[; ;main.c: 242:             LATCbits.LATC4=1;
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+"243
+[; ;main.c: 243:             LATCbits.LATC5=1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 "244
-[; ;main.c: 244: }
-[e :UE 1555 ]
+[; ;main.c: 244:             break;
+[e $U 1557  ]
+"245
+[; ;main.c: 245:     }
+}
+[e $U 1557  ]
+[e :U 1558 ]
+[e [\ _var_compteur , $ -> 0 `i 1559
+ , $ -> 1 `i 1560
+ , $ -> 2 `i 1561
+ , $ -> 3 `i 1562
+ , $ -> 4 `i 1563
+ , $ -> 5 `i 1564
+ 1557 ]
+[e :U 1557 ]
+"248
+[; ;main.c: 248: }
+[e :UE 1556 ]
 }

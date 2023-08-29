@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -cn -h+dist/default/production\Labo2.X.production.sym \
   --cmf=dist/default/production\Labo2.X.production.cmf -z -Q18F25K80 \
-  -oC:\Users\alexg\AppData\Local\Temp\xcAsh94.\driver_tmp_3.o \
+  -oC:\Users\alexg\AppData\Local\Temp\xcAsk1s.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Labo2.X.production.map \
-  --md=C:\Users\alexg\AppData\Local\Temp\xcAsh94.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\alexg\AppData\Local\Temp\xcAsk1s.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=01000h-010FFhx112 -AMEDIUMCONST=01000h-07FFFh \
   -ACOMRAM=01h-05Fh -AABS1=00h-0E40h -ABIGRAM=01h-0E40h \
@@ -29,7 +29,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\alexg\AppData\Local\Temp\xcAsh94.\driver_tmp_9.o \
+  C:\Users\alexg\AppData\Local\Temp\xcAsk1s.\driver_tmp_9.o \
   dist/default/production\Labo2.X.production.o 
 
 Object code version is 3.11
@@ -39,33 +39,33 @@ Machine type is 18F25K80
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\alexg\AppData\Local\Temp\xcAsh94.\driver_tmp_9.o
+C:\Users\alexg\AppData\Local\Temp\xcAsk1s.\driver_tmp_9.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
 dist/default/production\Labo2.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
-                text5                              7E36     7E36       12     3F1B       0
-                text4                              7E48     7E48       28     3F24       0
-                text3                              7E1E     7E1E        A     3F0F       0
-                text2                              7EC8     7EC8       9A     3F64       0
-                text1                              7E70     7E70       58     3F38       0
-                text0                              7F62     7F62       9E     3FB1       0
+                text5                              7E0C     7E0C       12     3F06       0
+                text4                              7E1E     7E1E       28     3F0F       0
+                text3                              7DF4     7DF4        A     3EFA       0
+                text2                              7E9E     7E9E       9A     3F4F       0
+                text1                              7E46     7E46       58     3F23       0
+                text0                              7F38     7F38       C8     3F9C       0
                 cstackCOMRAM                          1        1        A        1       1
                 bssCOMRAM                             B        B        2        1       1
-                cinit                              7E28     7E28        E     3F14       0
+                cinit                              7DFE     7DFE        E     3EFF       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                                  0        0        4         0
-                text5                              7E36     7E36       12         0
-                text4                              7E48     7E48       28         0
-                text3                              7E1E     7E1E        A         0
-                text2                              7EC8     7EC8       9A         0
-                text1                              7E70     7E70       58         0
-                text0                              7F62     7F62       9E         0
-                cinit                              7E28     7E28        E         0
+                text5                              7E0C     7E0C       12         0
+                text4                              7E1E     7E1E       28         0
+                text3                              7DF4     7DF4        A         0
+                text2                              7E9E     7E9E       9A         0
+                text1                              7E46     7E46       58         0
+                text0                              7F38     7F38       C8         0
+                cinit                              7DFE     7DFE        E         0
 
         CLASS   CONST          
 
@@ -137,13 +137,13 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  00000C  00000D         1       1  COMRAM  
-                text3                          007E1E  00000A  007E28      3F0F       0  CODE    
-                cinit                          007E28  00000E  007E36      3F14       0  CODE    
-                text5                          007E36  000012  007E48      3F1B       0  CODE    
-                text4                          007E48  000028  007E70      3F24       0  CODE    
-                text1                          007E70  000058  007EC8      3F38       0  CODE    
-                text2                          007EC8  00009A  007F62      3F64       0  CODE    
-                text0                          007F62  00009E  008000      3FB1       0  CODE    
+                text3                          007DF4  00000A  007DFE      3EFA       0  CODE    
+                cinit                          007DFE  00000E  007E0C      3EFF       0  CODE    
+                text5                          007E0C  000012  007E1E      3F06       0  CODE    
+                text4                          007E1E  000028  007E46      3F0F       0  CODE    
+                text1                          007E46  000058  007E9E      3F23       0  CODE    
+                text2                          007E9E  00009A  007F38      3F4F       0  CODE    
+                text0                          007F38  0000C8  008000      3F9C       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -166,14 +166,14 @@ UNUSED ADDRESS RANGES
         BANK9            000900-0009FF              100
         BIGRAM           00000D-000E40              E34
         BIGSFR           000E41-000FFF              1BF
-        CODE             000004-007E1D             7E1A
+        CODE             000004-007DF3             7DF0
         COMRAM           00000D-00005F               53
-        CONST            000004-007E1D             7E1A
+        CONST            000004-007DF3             7DF0
         EEDATA           F00000-F003FF              400
-        MEDIUMCONST      001000-007E1D             6E1E
+        MEDIUMCONST      001000-007DF3             6DF4
         RAM              000060-000E40              100
         SFR              000E41-000FFF               BF
-        SMALLCONST       001000-007E1D              100
+        SMALLCONST       001000-007DF3              100
 
                                   Symbol Table
 
@@ -188,13 +188,13 @@ _LATC                           (abs)        000F8B
 _LATCbits                       (abs)        000F8B
 _OSCCON                         (abs)        000FD3
 _OSCCON2                        (abs)        000FD2
-_OSCILLATOR_Initialize          text5        007E36
+_OSCILLATOR_Initialize          text5        007E0C
 _OSCTUNE                        (abs)        000F9B
-_PIN_MANAGER_Initialize         text4        007E48
+_PIN_MANAGER_Initialize         text4        007E1E
 _PORTBbits                      (abs)        000F81
 _PORTCbits                      (abs)        000F82
 _REFOCON                        (abs)        000F9A
-_SYSTEM_Initialize              text3        007E1E
+_SYSTEM_Initialize              text3        007DF4
 _TRISA                          (abs)        000F92
 _TRISB                          (abs)        000F93
 _TRISC                          (abs)        000F94
@@ -364,34 +364,34 @@ ___rparam_used                  (abs)        000001
 ___sp                           stack        000000
 __accesstop                     (abs)        000060
 __activetblptr                  (abs)        000002
-__end_of_OSCILLATOR_Initialize  text5        007E48
-__end_of_PIN_MANAGER_Initialize text4        007E70
-__end_of_SYSTEM_Initialize      text3        007E28
-__end_of__initialization        cinit        007E2C
-__end_of_afficheur              text2        007F62
-__end_of_cligne                 text1        007EC8
+__end_of_OSCILLATOR_Initialize  text5        007E1E
+__end_of_PIN_MANAGER_Initialize text4        007E46
+__end_of_SYSTEM_Initialize      text3        007DFE
+__end_of__initialization        cinit        007E02
+__end_of_afficheur              text2        007F38
+__end_of_cligne                 text1        007E9E
 __end_of_main                   text0        008000
-__initialization                cinit        007E28
+__initialization                cinit        007DFE
 __mediumconst                   mediumconst  000000
 __pbssCOMRAM                    bssCOMRAM    00000B
-__pcinit                        cinit        007E28
+__pcinit                        cinit        007DFE
 __pcstackCOMRAM                 cstackCOMRAM 000001
-__ptext0                        text0        007F62
-__ptext1                        text1        007E70
-__ptext2                        text2        007EC8
-__ptext3                        text3        007E1E
-__ptext4                        text4        007E48
-__ptext5                        text5        007E36
+__ptext0                        text0        007F38
+__ptext1                        text1        007E46
+__ptext2                        text2        007E9E
+__ptext3                        text3        007DF4
+__ptext4                        text4        007E1E
+__ptext5                        text5        007E0C
 __ramtop                        ramtop       001000
 __smallconst                    smallconst   000000
-_afficheur                      text2        007EC8
-_cligne                         text1        007E70
-_main                           text0        007F62
+_afficheur                      text2        007E9E
+_cligne                         text1        007E46
+_main                           text0        007F38
 _var_compteur                   bssCOMRAM    00000B
 afficheur@var_compteur          cstackCOMRAM 000001
 cligne@i                        cstackCOMRAM 000005
 cligne@nb                       cstackCOMRAM 000001
-end_of_initialization           cinit        007E2C
+end_of_initialization           cinit        007E02
 intlevel0                       text         000000
 intlevel1                       text         000000
 intlevel2                       text         000000
@@ -402,32 +402,32 @@ main@maintien                   cstackCOMRAM 000009
 stackhi                         (abs)        000000
 stacklo                         (abs)        000000
 start                           init         000000
-start_initialization            cinit        007E28
+start_initialization            cinit        007DFE
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	7E48	0000	40
+		_PIN_MANAGER_Initialize		CODE           	7E1E	0000	40
 
 mcc_generated_files/pin_manager.c estimated size: 40
 
 shared
-		__initialization		CODE           	7E28	0000	4
+		__initialization		CODE           	7DFE	0000	4
 
 shared estimated size: 4
 
 mcc_generated_files/mcc.c
-		_OSCILLATOR_Initialize		CODE           	7E36	0000	18
-		_SYSTEM_Initialize		CODE           	7E1E	0000	10
+		_OSCILLATOR_Initialize		CODE           	7E0C	0000	18
+		_SYSTEM_Initialize		CODE           	7DF4	0000	10
 
 mcc_generated_files/mcc.c estimated size: 28
 
 main.c
-		_afficheur     		CODE           	7EC8	0000	154
-		_main          		CODE           	7F62	0000	158
-		_cligne        		CODE           	7E70	0000	88
+		_afficheur     		CODE           	7E9E	0000	154
+		_main          		CODE           	7F38	0000	200
+		_cligne        		CODE           	7E46	0000	88
 
-main.c estimated size: 400
+main.c estimated size: 442
 

@@ -70,8 +70,10 @@ void main(void)
                  if (var_compteur > 5) {        // si var_comp plus grand que 5
                      var_compteur = 0;          // reinitialise var_comp = 0
                  }
-                 maintien = 1;                  // maintien a 1 pour debounce
-                 __delay_ms(250);               // delay 250ms
+                 __delay_ms(250); 
+                 if (maintien == 1) {
+                     var_compteur++;
+                 }
              }
          }
          else {

@@ -20327,8 +20327,12 @@ void main(void)
                  if (var_compteur > 5) {
                      var_compteur = 0;
                  }
-                 maintien = 1;
                  _delay((unsigned long)((250)*(20000000/4000.0)));
+                 if (maintien == 1) {
+                     var_compteur++;
+                     _delay((unsigned long)((1000)*(20000000/4000.0)));
+                 }
+
              }
          }
          else {

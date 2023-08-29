@@ -29,9 +29,9 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "57 C:\Users\alexg\Bureau\Labo2.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"86
+"90
 [v _cligne cligne `(v  1 e 1 0 ]
-"143
+"147
 [v _afficheur afficheur `(v  1 e 1 0 ]
 "50 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -202,22 +202,22 @@
 {
 "61
 [v main@maintien maintien `ui  1 a 2 8 ]
-"81
+"85
 } 0
-"86
+"90
 [v _cligne cligne `(v  1 e 1 0 ]
 {
-"87
+"91
 [v cligne@i i `ui  1 a 2 4 ]
-"86
+"90
 [v cligne@nb nb `ui  1 p 2 0 ]
-"94
+"98
 } 0
-"143
+"147
 [v _afficheur afficheur `(v  1 e 1 0 ]
 {
 [v afficheur@var_compteur var_compteur `i  1 p 2 0 ]
-"188
+"192
 } 0
 "50 C:\Users\alexg\Bureau\Labo2.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
